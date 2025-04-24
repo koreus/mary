@@ -170,7 +170,7 @@ class Spotlight extends Component
                             <div class="-mx-1 mt-1" @click="close()" @keydown.enter="close()">
                                 <template x-for="(item, index) in results" :key="index">
                                     <!-- ITEM -->
-                                    <a x-bind:href="item.link" class="mary-spotlight-element" wire:navigate tabindex="0">
+                                    <a x-bind:href="item.link" class="mary-spotlight-element" tabindex="0">
                                         <div class="p-3 hover:bg-base-200 border-t-[length:var(--border)] border-t-base-content/10" >
                                             <div class="flex gap-3 items-center">
                                                 <!-- AVATAR -->
@@ -189,7 +189,7 @@ class Spotlight extends Component
 
                                                     <!-- DESCRIPTION -->
                                                     <template x-if="item.description">
-                                                        <div x-text="item.description" class="text-base-content/50 text-sm truncate"></div>
+                                                        <div x-html="item.description" class="text-base-content/50 text-sm truncate"></div>
                                                     </template>
                                                 </div>
                                             </div>
